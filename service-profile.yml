@@ -1,0 +1,15 @@
+#MONGO
+spring:
+  data:
+    mongodb:
+      host: mongo
+      port: 27017
+      database: dbprofile
+      
+#EUREKA
+eureka:
+  instance:
+    ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
