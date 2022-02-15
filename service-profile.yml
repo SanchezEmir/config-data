@@ -1,10 +1,15 @@
-spring:
-  application:
-    name: service-profile
+server:
+  port: 8081
 
 #MONGO
 spring:
   data:
     mongodb:
       uri: mongo://localhost:27017/dbprofilex2
+      
+#EUREKA
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
       
