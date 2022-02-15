@@ -2,7 +2,7 @@
 spring:
   data:
     mongodb:
-      uri: mongo://localhost:27017/dbprofile
+      uri: mongo://localhost:27017/dbprofilex2
       
 #EUREKA
 eureka:
