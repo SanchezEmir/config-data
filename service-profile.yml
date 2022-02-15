@@ -2,9 +2,10 @@
 spring:
   data:
     mongodb:
-      host: mongo
-      port: 27017
-      database: dbprofile
+      uri: mongo://localhost:27017/dbprofile
+      #host: mongo
+      #port: 27017
+      #database: dbprofile
       
 #EUREKA
 eureka:
