@@ -3,7 +3,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/dbprofilex2
+      uri: mongodb://localhost:27017/dbcustomerx2
       #host: mongodb
       #port: 27017
       #database: dbcustomer
