@@ -7,8 +7,8 @@ eureka:
     #register-with-eureka: true
     #fetch-registry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
       #defaultZone: http://localhost:8761/eureka
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
 
 #RUTAS
 spring:
@@ -20,8 +20,8 @@ spring:
       routes:
       
       - id: ms1-customer
-        #uri: lb://service-customer
-        uri: http://localhost:8080
+        uri: lb://service-customer
+        #uri: http://localhost:8080
         predicates:
         - Path=/api/ms1/**
         #localhost:8090/api/v1/customer -> asi buscará el api en eureka y resolverá en el ms customer.
@@ -29,8 +29,8 @@ spring:
         - RewritePath=/api/ms1/(?<x>.*), /$\{x}
         
       - id: ms2-profile
-        #uri: lb://service-profile
-        uri: http://localhost:8081
+        uri: lb://service-profile
+        #uri: http://localhost:8081
         predicates:
         - Path=/api/ms2/**
         #localhost:8090/api/v1/typecustomer
