@@ -38,14 +38,4 @@ spring:
         #localhost:8090/api/ms2/subtype
         filters:
         - RewritePath=/api/ms2/(?<x>.*), /$\{x}
-        
-        
-        
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
+
