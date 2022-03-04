@@ -40,3 +40,88 @@ spring:
         filters:
         - RewritePath=/api/ms2/(?<x>.*), /$\{x}
 
+      - id: ms3-creditcard
+        uri: lb://service-creditcard
+        predicates:
+        - Path=/api/ms3/**
+        filters:
+        - RewritePath=/api/ms3/(?<x>.*), /$\{x}
+
+      - id: ms4-savingaccount
+        uri: lb://service-savingaccount
+        predicates:
+        - Path=/api/ms4/**
+        filters:
+        - RewritePath=/api/ms4/(?<x>.*), /$\{x}
+
+      - id: ms5-currentaccount
+        uri: lb://service-currentaccount
+        predicates:
+        - Path=/api/ms5/**
+        filters:
+        - RewritePath=/api/ms5/(?<x>.*), /$\{x}
+
+      - id: ms6-fixedtermaccount
+        uri: lb://service-fixedtermaccount
+        predicates:
+        - Path=/api/ms6/**
+        filters:
+        - RewritePath=/api/ms6/(?<x>.*), /$\{x}
+
+      - id: ms7-creditcharge
+        uri: lb://service-creditcharge
+        predicates:
+        - Path=/api/ms7/**
+        filters:
+        - RewritePath=/api/ms7/(?<x>.*), /$\{x}
+
+      - id: ms8-transactioncurrent
+        uri: lb://service-transactioncurrent
+        predicates:
+        - Path=/api/ms8/**
+        filters:
+        - RewritePath=/api/ms8/(?<x>.*), /$\{x}
+
+      - id: ms9-transactionsaving
+        uri: lb://service-transactionsaving
+        predicates:
+        - Path=/api/ms9/**
+        filters:
+        - RewritePath=/api/ms9/(?<x>.*), /$\{x}
+
+      - id: ms10-transactionfixed
+        uri: lb://service-transactionfixed
+        predicates:
+        - Path=/api/ms10/**
+        filters:
+        - RewritePath=/api/ms10/(?<x>.*), /$\{x}
+
+      - id: ms11-transfer
+        uri: lb://service-transfer
+        predicates:
+        - Path=/api/ms11/**
+        filters:
+        - RewritePath=/api/ms11/(?<x>.*), /$\{x}
+
+      - id: ms12-reports
+        uri: lb://service-reports
+        predicates:
+        - Path=/api/ms12/**
+        filters:
+        - RewritePath=/api/ms12/(?<x>.*), /$\{x}
+
+      - id: ms13-creditpay
+        uri: lb://service-creditpay
+        predicates:
+        - Path=/api/ms13/**
+        filters:
+        - RewritePath=/api/ms13/(?<x>.*), /$\{x}
+
+      - id: ms14-yankiaccount
+        uri: lb://service-yankiaccount
+        predicates:
+        - Path=/api/ms14/**
+        filters:
+        - RewritePath=/api/ms14/(?<x>.*), /$\{x}
+
+
