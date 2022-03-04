@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+#MONGO
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/dbsavingaccountx2
+      
+#EUREKA
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
+      #defaultZone: http://localhost:8761/eureka/
+      #defaultZone: ${EUREKA_SERVER:http://eureka-server:8761/eureka}
+      
